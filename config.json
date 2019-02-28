@@ -1,0 +1,10 @@
+{
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  },
+  "socketIO": {
+    "port": 6001,
+    "host": "localhost"
+  }
+}

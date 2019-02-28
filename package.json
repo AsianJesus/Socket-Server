@@ -1,0 +1,13 @@
+{
+  "name": "socketServer",
+  "title": "Socket Server",
+  "description": "Proxy server between front-end and Redis server",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ioredis": "^4.6.2",
+    "socket.io": "^2.2.0"
+  }
+}
