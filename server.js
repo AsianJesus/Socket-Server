@@ -14,12 +14,17 @@ var http = require('http').createServer((response, request) => {
 var io = require('socket.io')(http)
 
 io.on('connection', function (socket) {
+    socket.on('update_user_info', (data) => {
+        console.log(`User #${data} has updated profile info`)
+        io.emit(`update_user_info_${data}`, [])
+    })
     console.log('New connection')
 })
 
 io.on("disconnect", function (socket) {
     console.log("Some connection closed")
 })
+
 
 http.listen(socketioConfig.port || '6001', socketioConfig.host || 'localhost')
 
